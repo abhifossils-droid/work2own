@@ -1,83 +1,369 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>WORK2OWN — Work Today. Own Tomorrow.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Work2Own - Jobs, Careers & Skills</title>
+<meta name="description" content="Work2Own helps you discover jobs, government exams, career opportunities, resume tips and useful career resources.">
+
 <style>
-:root{--bg:#050b12;--panel:#0b141e;--panel2:#0f1b27;--gold:#d9a441;--gold2:#f2c15c;--text:#f5f7fa;--muted:#aeb8c4;--line:#263747;--green:#39c46a}
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#03080e,#07131e 55%,#050b12);color:var(--text);font-family:Inter,Arial,sans-serif}button,input,select{font:inherit}.app{display:flex;min-height:100vh}.side{width:245px;border-right:1px solid #182635;padding:20px 14px;position:fixed;inset:0 auto 0 0;background:#050d15}.logo{font-size:27px;font-weight:800;letter-spacing:1px;padding:8px 12px 24px}.logo span{color:var(--gold2)}.tag{font-size:8px;letter-spacing:1.8px;color:#caa95e}.nav button{display:block;width:100%;padding:13px 14px;margin:4px 0;border:0;border-radius:9px;background:transparent;color:#d7dee6;text-align:left;cursor:pointer}.nav button:hover,.nav button.active{background:#19170f;color:var(--gold2)}.main{margin-left:245px;width:calc(100% - 245px)}.top{height:72px;border-bottom:1px solid #182635;display:flex;align-items:center;padding:0 30px;gap:18px}.search{flex:1;max-width:520px;background:#09131e;border:1px solid #263747;border-radius:10px;padding:12px 16px;color:white}.profile{margin-left:auto;color:#d9dee5}.hero{padding:56px 6%;display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center}.eyebrow{color:var(--gold2);letter-spacing:2px;font-weight:700}.hero h1{font-size:clamp(38px,5vw,70px);line-height:.98;margin:15px 0}.hero h1 span{color:var(--gold2)}.hero p{font-size:18px;color:var(--muted);max-width:650px;line-height:1.6}.cta{background:linear-gradient(135deg,var(--gold2),#c88b20);border:0;border-radius:9px;padding:15px 23px;font-weight:800;cursor:pointer}.hero-art{min-height:340px;border:1px solid #5c471e;border-radius:22px;background:radial-gradient(circle at 70% 30%,#8c641d55,transparent 30%),linear-gradient(145deg,#0d1822,#050b11);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.arrow{font-size:180px;color:#d8a53d88;transform:rotate(-12deg)}.person{position:absolute;font-size:120px;right:27%;bottom:25px}.section{padding:25px 6% 55px}.section h2{font-size:30px;margin-bottom:8px}.muted{color:var(--muted)}.journey{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:25px}.card{background:linear-gradient(145deg,#0b1621,#08111a);border:1px solid #243443;border-radius:14px;padding:22px}.journey .card{text-align:center}.icon{font-size:30px;color:var(--gold2)}.features{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.feature h3{margin:8px 0}.states{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.state{padding:10px 15px;border:1px solid #354656;border-radius:30px;color:#e3e8ed;background:#0b151f;cursor:pointer}.state:hover,.state.selected{border-color:var(--gold2);color:var(--gold2)}.matchbar{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:20px}.field{background:#0a141e;border:1px solid #2a3b4b;border-radius:8px;padding:12px;color:#dce3ea}.matches{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}.match .score{color:#63db86;font-weight:800}.chips span{display:inline-block;font-size:11px;border:1px solid #334454;border-radius:20px;padding:5px 8px;margin:3px;color:#cdd6df}.connect{background:var(--gold2);border:0;border-radius:7px;padding:9px 13px;font-weight:700;cursor:pointer}.footer{border-top:1px solid #1c2b39;padding:35px 6%;color:#8793a0;text-align:center}@media(max-width:1000px){.side{display:none}.main{margin:0;width:100%}.hero{grid-template-columns:1fr}.journey,.features{grid-template-columns:repeat(2,1fr)}.matches{grid-template-columns:repeat(2,1fr)}.matchbar{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.top{padding:0 14px}.hero,.section{padding-left:20px;padding-right:20px}.journey,.features,.matches{grid-template-columns:1fr}.matchbar{grid-template-columns:1fr}.hero-art{min-height:240px}.hero h1{font-size:42px}}
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fb;
+color:#172033;
+line-height:1.6
+}
+
+header{
+background:#071a35;
+color:white;
+padding:18px 6%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:sticky;
+top:0;
+z-index:10
+}
+
+.logo{
+font-size:26px;
+font-weight:bold
+}
+
+.logo span{color:#28c76f}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:24px;
+font-size:15px
+}
+
+.hero{
+background:linear-gradient(135deg,#071a35,#123c73);
+color:white;
+padding:80px 6%;
+text-align:center
+}
+
+.hero h1{
+font-size:46px;
+margin-bottom:15px
+}
+
+.hero h1 span{color:#28c76f}
+
+.hero p{
+font-size:19px;
+max-width:700px;
+margin:0 auto 30px;
+color:#dbe6f5
+}
+
+.search{
+max-width:650px;
+margin:auto;
+display:flex;
+background:white;
+padding:6px;
+border-radius:8px
+}
+
+.search input{
+flex:1;
+border:0;
+padding:15px;
+font-size:16px;
+outline:none
+}
+
+.search button{
+background:#28c76f;
+border:0;
+padding:0 25px;
+border-radius:6px;
+font-weight:bold;
+cursor:pointer
+}
+
+.container{
+max-width:1150px;
+margin:auto;
+padding:55px 20px
+}
+
+.section-title{
+text-align:center;
+margin-bottom:30px
+}
+
+.section-title h2{
+font-size:30px;
+margin-bottom:8px
+}
+
+.section-title p{
+color:#687386
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px
+}
+
+.card{
+background:white;
+padding:28px;
+border-radius:12px;
+box-shadow:0 4px 18px rgba(0,0,0,.06);
+transition:.2s
+}
+
+.card:hover{
+transform:translateY(-4px)
+}
+
+.icon{
+font-size:32px;
+margin-bottom:12px
+}
+
+.card h3{
+margin-bottom:8px
+}
+
+.card p{
+color:#687386;
+font-size:14px;
+margin-bottom:15px
+}
+
+.card a{
+color:#1464d2;
+font-weight:bold;
+text-decoration:none
+}
+
+.highlight{
+background:#eaf8f0;
+border-radius:15px;
+padding:40px;
+text-align:center;
+margin-bottom:50px
+}
+
+.highlight h2{
+margin-bottom:10px
+}
+
+.cta{
+background:#071a35;
+color:white;
+border-radius:15px;
+padding:45px;
+text-align:center
+}
+
+.cta h2{
+font-size:30px;
+margin-bottom:10px
+}
+
+.cta p{
+color:#dbe6f5;
+margin-bottom:20px
+}
+
+.btn{
+display:inline-block;
+background:#28c76f;
+color:#071a35;
+padding:12px 25px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold
+}
+
+footer{
+background:#071a35;
+color:#ccd6e5;
+padding:35px 6%;
+text-align:center
+}
+
+footer p{
+font-size:14px;
+margin:6px
+}
+
+@media(max-width:700px){
+.hero h1{font-size:34px}
+nav{display:none}
+.search{flex-direction:column}
+.search button{padding:14px}
+}
 </style>
 </head>
+
 <body>
-<div class="app">
-<aside class="side">
-  <div class="logo">W<span>2</span>O<br><small style="font-size:14px;letter-spacing:3px">WORK2OWN</small><div class="tag">WORK TODAY. OWN TOMORROW.</div></div>
-  <div class="nav">
-    <button class="active">⌂ &nbsp; Dashboard</button><button>♙ &nbsp; Community</button><button>💡 &nbsp; Business Ideas</button>
-    <button>🤝 &nbsp; Find a Partner</button><button>📍 &nbsp; Explore by State</button><button>💬 &nbsp; Messages</button><button>🔖 &nbsp; Saved</button><button>◯ &nbsp; My Profile</button>
-  </div>
-</aside>
-<main class="main">
-<header class="top"><input class="search" placeholder="Search members, ideas, skills..."><div>🔔</div><div>💬</div><div class="profile">Rahul Sharma ▾</div></header>
+
+<header>
+<div class="logo">Work<span>2</span>Own</div>
+
+<nav>
+<a href="#jobs">Jobs</a>
+<a href="#careers">Careers</a>
+<a href="#skills">Skills</a>
+<a href="#about">About</a>
+</nav>
+</header>
 
 <section class="hero">
-  <div>
-    <div class="eyebrow">WORK2OWN COMMUNITY</div>
-    <h1>YOU HAVE A JOB.<br><span>BUT YOU HAVE AN AMBITION TOO.</span></h1>
-    <p>A community for working professionals who want to turn their skills, ideas and experience into something they can own.</p>
-    <button class="cta" onclick="document.getElementById('partner').scrollIntoView({behavior:'smooth'})">JOIN WORK2OWN — FREE →</button>
-  </div>
-  <div class="hero-art"><div class="arrow">↗</div><div class="person">🧑‍💼</div></div>
+
+<h1>Own Your <span>Career Journey</span></h1>
+
+<p>
+Discover jobs, government opportunities, career guidance,
+skills and useful resources to help you move forward.
+</p>
+
+<div class="search">
+<input type="text" placeholder="Search jobs, exams, careers or skills...">
+<button onclick="searchMessage()">Search</button>
+</div>
+
 </section>
 
-<section class="section">
-  <div class="journey">
-    <div class="card"><div class="icon">⌕</div><h3>DISCOVER</h3><p class="muted">Explore ideas and possibilities.</p></div>
-    <div class="card"><div class="icon">♙</div><h3>CONNECT</h3><p class="muted">Find people with complementary skills.</p></div>
-    <div class="card"><div class="icon">↗</div><h3>BUILD</h3><p class="muted">Build while continuing your career.</p></div>
-    <div class="card"><div class="icon">♛</div><h3>OWN</h3><p class="muted">Create something valuable you own.</p></div>
-  </div>
+<section class="container" id="jobs">
+
+<div class="section-title">
+<h2>Explore Opportunities</h2>
+<p>Find the right direction for your career.</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🏛️</div>
+<h3>Government Jobs</h3>
+<p>Explore government jobs, exams, eligibility and preparation resources.</p>
+<a href="#">Explore Jobs →</a>
+</div>
+
+<div class="card">
+<div class="icon">🏦</div>
+<h3>Banking Jobs</h3>
+<p>Discover banking careers, recruitment information and preparation tips.</p>
+<a href="#">Explore Banking →</a>
+</div>
+
+<div class="card">
+<div class="icon">💼</div>
+<h3>Private Jobs</h3>
+<p>Find career opportunities and learn how to improve your employability.</p>
+<a href="#">Explore Careers →</a>
+</div>
+
+<div class="card">
+<div class="icon">🎓</div>
+<h3>Career Guidance</h3>
+<p>Practical guidance for choosing courses, careers and professional paths.</p>
+<a href="#">Learn More →</a>
+</div>
+
+</div>
 </section>
 
-<section class="section" id="partner">
-  <div class="eyebrow">CORE FEATURE</div><h2>Find Your Business Partner</h2><p class="muted">Search locally, by state, or across India.</p>
-  <div class="matchbar">
-    <select class="field"><option>Business Partner</option><option>Co-founder</option><option>Mentor</option></select>
-    <select class="field" id="state"><option>West Bengal</option><option>Maharashtra</option><option>Karnataka</option><option>Delhi</option><option>Tamil Nadu</option><option>Telangana</option></select>
-    <select class="field"><option>Kolkata</option><option>Howrah</option><option>Delhi</option><option>Mumbai</option></select>
-    <select class="field"><option>All Professions</option><option>IT</option><option>Finance</option><option>Marketing</option><option>Operations</option></select>
-    <button class="cta" onclick="alert('Demo: 128 potential matches found.')">SHOW MATCHES →</button>
-  </div>
-  <div class="states" id="states"></div>
-  <div class="matches">
-    <div class="card match"><div class="score">92% Match</div><h3>Amit Roy</h3><p class="muted">IT Professional · Kolkata</p><div class="chips"><span>Technology</span><span>Operations</span><span>E-commerce</span></div><p>Interested in <b>Food Tech, D2C</b></p><button class="connect" onclick="alert('Connection request sent to Amit Roy')">Connect</button></div>
-    <div class="card match"><div class="score">88% Match</div><h3>Sneha Paul</h3><p class="muted">Marketing · Kolkata</p><div class="chips"><span>Marketing</span><span>Branding</span><span>Digital</span></div><p>Interested in <b>Food, Lifestyle</b></p><button class="connect" onclick="alert('Connection request sent to Sneha Paul')">Connect</button></div>
-    <div class="card match"><div class="score">83% Match</div><h3>Vikram Sen</h3><p class="muted">Operations · Howrah</p><div class="chips"><span>Supply Chain</span><span>Logistics</span></div><p>Interested in <b>Retail, Food Business</b></p><button class="connect" onclick="alert('Connection request sent to Vikram Sen')">Connect</button></div>
-    <div class="card match"><div class="score">81% Match</div><h3>Riya Ghosh</h3><p class="muted">Chartered Accountant · Kolkata</p><div class="chips"><span>Finance</span><span>Accounting</span></div><p>Interested in <b>FinTech, Food Business</b></p><button class="connect" onclick="alert('Connection request sent to Riya Ghosh')">Connect</button></div>
-  </div>
+<section class="container" id="careers">
+
+<div class="highlight">
+
+<h2>🚀 Build a Better Career</h2>
+
+<p>
+Your skills and experience can become your biggest assets.
+Learn how to improve your resume, prepare for interviews
+and find better opportunities.
+</p>
+
+</div>
+
+<div class="section-title">
+<h2>Career Resources</h2>
+<p>Useful resources for working professionals and job seekers.</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📄</div>
+<h3>Resume & CV</h3>
+<p>Learn how to create a professional resume that gets attention.</p>
+<a href="#">Resume Tips →</a>
+</div>
+
+<div class="card">
+<div class="icon">🎤</div>
+<h3>Interview Preparation</h3>
+<p>Improve your confidence and prepare for common interview questions.</p>
+<a href="#">Prepare Now →</a>
+</div>
+
+<div class="card">
+<div class="icon">📚</div>
+<h3>Exam Preparation</h3>
+<p>Study resources, strategies and useful information for competitive exams.</p>
+<a href="#">Start Preparing →</a>
+</div>
+
+<div class="card" id="skills">
+<div class="icon">💻</div>
+<h3>Skills</h3>
+<p>Discover practical skills that can improve your career opportunities.</p>
+<a href="#">Improve Skills →</a>
+</div>
+
+</div>
+
 </section>
 
-<section class="section">
-  <div class="eyebrow">EXPLORE INDIA</div><h2>WORK2OWN by State</h2><p class="muted">Start locally. Grow nationally.</p>
-  <div class="states" id="stateList"></div>
+<section class="container">
+
+<div class="cta">
+
+<h2>Work Today. Own Tomorrow.</h2>
+
+<p>
+Work2Own is being built to help working professionals
+turn their skills, knowledge and ideas into opportunities.
+</p>
+
+<a class="btn" href="mailto:work2own.in@gmail.com">Contact Work2Own</a>
+
+</div>
+
 </section>
 
-<section class="section">
-  <div class="features">
-    <div class="card"><div class="icon">💡</div><h3>Discover Ideas</h3><p class="muted">Explore business ideas shared by members.</p></div>
-    <div class="card"><div class="icon">🤝</div><h3>Find Your People</h3><p class="muted">Find co-founders, partners and mentors.</p></div>
-    <div class="card"><div class="icon">🚀</div><h3>Build Together</h3><p class="muted">Collaborate while continuing your career.</p></div>
-    <div class="card"><div class="icon">🏆</div><h3>Own Tomorrow</h3><p class="muted">Turn your ambition into something you own.</p></div>
-  </div>
-</section>
+<footer id="about">
 
-<footer class="footer"><b>WORK2OWN</b> — Work Today. Own Tomorrow.<br><br>Built for working professionals with ambition.</footer>
-</main></div>
+<p><strong>Work2Own</strong></p>
+
+<p>Jobs • Careers • Skills • Opportunities</p>
+
+<p>© 2026 Work2Own. All rights reserved.</p>
+
+</footer>
+
 <script>
-const states=["West Bengal","Maharashtra","Karnataka","Delhi","Tamil Nadu","Telangana","Gujarat","Rajasthan","Uttar Pradesh","Bihar","Odisha","Kerala","Punjab","Haryana","Madhya Pradesh","Jharkhand","Assam","Goa"];
-function addStates(id){const el=document.getElementById(id);states.forEach((s,i)=>{const b=document.createElement("button");b.className="state"+(i===0?" selected":"");b.textContent=s;b.onclick=()=>{document.querySelectorAll(".state").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");document.getElementById("state").value=s;};el.appendChild(b)})}
-addStates("states");addStates("stateList");
+function searchMessage(){
+alert("Search is coming soon. Work2Own is being built!");
+}
 </script>
+
 </body>
 </html>
